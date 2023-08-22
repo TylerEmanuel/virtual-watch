@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Clock App</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Karla:wght@800&family=Roboto+Mono:wght@500;600;700&family=Tilt+Prism&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <header class="container">
+            <h1 class="app_title">VirtualWatch</h1>
+            <div class="mode">
+                <button id="mode__clock" class="mode__btn mode__btn--active">Clock</button>
+                <button id="mode__timer" class="mode__btn">Timer</button>
+                <button id="mode__stopwatch" class="mode__btn">Stopwatch</button>
+            </div>
+        </header>
+
+        <main class="container">
+
+            <div id="clock" class="clock">
+                <h2 id="clock_text" class="clock_text time_display">00:00:00</h2>
+                <div id="clock_controls" class="controls">
+                    <button id="clock_controls__start" disabled=true class="controls__btn">Start</button>
+                    <button id="clock_controls__reset" disabled=true class="controls__btn">Reset</button>
+                </div>      
+            </div>
+
+
+            <div id="timer" class="timer">
+                <h2 id="timer_text" class="timer_text time_display hide-element">00:00:00</h2>
+                <form id="timer_form" class="timer_form">
+                    <label for="hours" class="timer_form__label">Hours</label>
+                    <label for="minutes" class="timer_form__label">Minutes</label>
+                    <label fsor="seconds" class="timer_form__label">Seconds</label>
+                    <input
+                        id="timer_form__hours"
+                        class="timer_form__input"
+                        name="hours"
+                        type="number"
+                        min="0"
+                        max="59"
+                        placeholder=0
+                    />
+                    <input
+                        id="timer_form__minutes"
+                        class="timer_form__input"
+                        name="minutes"
+                        type="number"
+                        min="0"
+                        max="59"
+                        placeholder=0
+                    />
+                    <input
+                        id="timer_form__seconds"
+                        class="timer_form__input"
+                        name="seconds"
+                        type="number"
+                        min="0"
+                        max="59"
+                        placeholder=0
+                    />
+                </form>
+                <div id="timer_controls" class="controls">
+                    <button id="timer_controls__start" class="controls__btn">Start</button>
+                    <button id="timer_controls__stop" disabled=true class="controls__btn hide-element">Stop</button>
+                    <button id="timer_controls__reset" disabled=true class="controls__btn">Reset</button>
+                </div>                  
+            </div>
+
+
+            <div id="stopwatch" class="stopwatch">
+                <h2 id="stopwatch_text" class="stopwatch_text time_display">00.00</h2>
+            
+                <div id="stopwatch_controls" class="controls">
+                    <button id="stopwatch_controls__start" class="controls__btn">Start</button>
+                    <button id="stopwatch_controls__stop" disabled=true class="controls__btn hide-element">Stop</button>
+                    <button id="stopwatch_controls__reset" disabled=true class="controls__btn">Reset</button>
+                </div>
+            </div>
+
+        </main>
+
+        <footer class="container">
+            <a class="link" href="https://tyleremanuel.com"/>tyleremanuel.com</a>
+            <p class="copyright">© 2023 Tyler Emanuel</p>
+        </footer>
+
+        <script src="index.js"></script>
+    </body>
+</html>
+

@@ -1,0 +1,11 @@
+[build]
+  publish = "public"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[dev]
+  port = 3000 # Port that the dev server will be listening on
+  publish = "public" # Folder with the static content for _redirect file
